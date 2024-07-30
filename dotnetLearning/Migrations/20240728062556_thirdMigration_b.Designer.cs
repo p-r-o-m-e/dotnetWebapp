@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetLearning.Data;
 
@@ -11,9 +12,11 @@ using dotnetLearning.Data;
 namespace dotnetLearning.Migrations
 {
     [DbContext(typeof(dotnetLearningContext))]
-    partial class dotnetLearningContextModelSnapshot : ModelSnapshot
+    [Migration("20240728062556_thirdMigration_b")]
+    partial class thirdMigration_b
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
